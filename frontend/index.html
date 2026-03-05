@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Intelligent Adaptive Memory Simulator</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Intelligent Adaptive Memory Allocation Simulator</h1>
+
+<div class="card">
+
+<input type="number" id="processSize" placeholder="Process Size">
+<input type="number" id="processTime" placeholder="Execution Time (sec)">
+<select id="algorithm">
+  <option value="auto">Adaptive Auto</option>
+  <option value="first">First Fit</option>
+  <option value="best">Best Fit</option>
+  <option value="worst">Worst Fit</option>
+</select>
+
+<button onclick="allocate()">Allocate</button>
+<button onclick="allocatePaging()">Paging Allocate</button>
+<button onclick="compaction()">Run Compaction</button>
+<button onclick="saveReport()">Save Report</button>
+
+</div>
+
+<div class="card">
+<h3>Memory Blocks</h3>
+<div id="memoryView"></div>
+</div>
+
+<div class="card">
+<h3>External Fragmentation (Live)</h3>
+<canvas id="fragmentChart"></canvas>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
